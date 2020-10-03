@@ -20,4 +20,14 @@ getExpenses(): Observable<Expense[]>{
 }
 saveExpense(expense: Expense): Observable<Expense>{
   return this.httpClient.post<Expense>(this.getUrl,expense);
-}}
+}
+getExpense(id :number): Observable<Expense>{
+  return this.httpClient.get<Expense>('${this.getUrl}/${id}').pipe(
+    map(response => response ))
+  
+
+}
+deleteExpense(id: number): Observable<any>{
+  return this.httpClient.delete('${this.getUrl}/${this.id}',{responseType:'text'});
+}
+}

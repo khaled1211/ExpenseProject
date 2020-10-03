@@ -7,8 +7,10 @@ import { AppComponent } from './app.component';
 import { ListExpenseComponent } from './components/list-expense/list-expense.component';
 import { AddExpenseComponent } from './components/add-expense/add-expense.component';
 
-const routers: Routes =[{path: 'expenses', component: ListExpenseComponent},
+const routers: Routes =[
+{path: 'expenses', component: ListExpenseComponent},
 {path: 'addexpense', component: AddExpenseComponent},
+{path: 'editexpense/:id', component: AddExpenseComponent},
 {path: '', redirectTo: '/expenses',pathMatch:'full'}];
 @NgModule({
   declarations: [

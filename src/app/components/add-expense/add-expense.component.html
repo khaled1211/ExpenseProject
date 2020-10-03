@@ -12,4 +12,6 @@
     <textarea type="text" name="description" [(ngModel)]="expense.description"
     placeholder="entrer description"></textarea>
     <button type="submit" >Add Expense</button>
+    
+    <button *ngIf="expense.id" (click)="deleteExpense(expense.id)">Delete</button>
 </form>
